@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<title>E2_U4</title>
+		<meta charset="utf-8">
+		
+	</head>
+	<body>
+		<h1>Primer bloque de párrafos</h1>
+		
+		<input type="button" onclick="cambiarColor()" value="Cambiar color"> <input type="button" onclick="cambiarTamano()" value="Cambiar tamaño">
+		
+		
+		<script>
+			let titulo = document.getElementsByTagName("H1");
+		
+			function cambiarColor(){
+					titulo[0].style.color = `rgb(${(parseInt(Math.random()*256))},${(parseInt(Math.random()*256))},${(parseInt(Math.random()*256))})`;
+			}
+			function cambiarTamano(){
+					
+					titulo[0].style.fontSize = `${parseFloat((Math.random()*3).toFixed(2))}em`;
+			}
+			
+		</script>
+	</body>
+</html>

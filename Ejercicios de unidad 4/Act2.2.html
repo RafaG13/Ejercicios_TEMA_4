@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<title>E2_U4</title>
+		<meta charset="utf-8">
+		
+	</head>
+	<body>
+		<h2>Primer bloque de párrafos</h2>
+		<div id="bloque1">
+			<p>Confeccionar una página que contenga un div con tres párrafos. Luego acceder a la propiedad childNodes, verificar cuantos hijos tiene y de que tipo de nodos se tratan</p>
+			<p>Confeccionar una página que contenga un div con tres párrafos. Luego acceder a la propiedad childNodes, verificar cuantos hijos tiene y de que tipo de nodos se tratan</p>
+			<p>Confeccionar una página que contenga un div con tres párrafos. Luego acceder a la propiedad childNodes, verificar cuantos hijos tiene y de que tipo de nodos se tratan</p>
+		</div>
+		<h2>Segundo bloque de párrafos</h2>
+		<div id="bloque2">
+			<p>Confeccionar una página que contenga un div con tres párrafos. Luego acceder a la propiedad childNodes, verificar cuantos hijos tiene y de que tipo de nodos se tratan</p>
+			<p>Confeccionar una página que contenga un div con tres párrafos. Luego acceder a la propiedad childNodes, verificar cuantos hijos tiene y de que tipo de nodos se tratan</p>
+			<p>Confeccionar una página que contenga un div con tres párrafos. Luego acceder a la propiedad childNodes, verificar cuantos hijos tiene y de que tipo de nodos se tratan</p>
+		</div>
+		<input type="button" onclick="mostrar()" value="Poner puntos">
+		
+		
+		<script>
+		let padre = document.getElementById("bloque2");
+		let hijos = padre.getElementsByTagName("P");
+		function mostrar(){
+			let contenido = "";
+			let cadenaNueva = "";
+			for(let i= 0;i<hijos.length;i++) {
+				contenido = hijos[i].innerHTML;
+				contenido+=".";
+				hijos[i].innerHTML = contenido;
+			}
+			<!-- hijos.forEach(function(e){ -->
+				<!-- contenido = e.innerHTML; -->
+				<!-- contenido+="."; -->
+				<!-- e.innerHTML = contenido; -->
+			<!-- }); -->
+		}
+		
+		
+		</script>
+	</body>
+</html>

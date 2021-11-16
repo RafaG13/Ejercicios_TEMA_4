@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<title>E1_U4</title>
+		<meta charset="utf-8">
+		
+	</head>
+	<body>
+		<div id="main">
+			<p>Confeccionar una página que contenga un div con tres párrafos. Luego acceder a la propiedad childNodes, verificar cuantos hijos tiene y de que tipo de nodos se tratan</p>
+			<p>Confeccionar una página que contenga un div con tres párrafos. Luego acceder a la propiedad childNodes, verificar cuantos hijos tiene y de que tipo de nodos se tratan</p>
+			<p>Confeccionar una página que contenga un div con tres párrafos. Luego acceder a la propiedad childNodes, verificar cuantos hijos tiene y de que tipo de nodos se tratan</p>
+		</div>
+		<input type="button" onclick="mostrar()" value="Mostrar información">
+		<div id="resultados">
+			
+		
+		</div>
+		
+		<script>
+		const result = document.getElementById("resultados");
+		const padre = document.getElementById("main");
+		const hijos = padre.childNodes 
+		let cantidad = hijos.length;
+		let cadenaResultado = "Cantidad de elementos: "+cantidad+"<br> ";
+		hijos.forEach(valor => cadenaResultado+=" "+valor.nodeName+"<br> ");
+		
+		<!-- const tipos = Array(); -->
+		
+		<!-- hijos.forEach(h => { -->
+			<!-- if(tipos.includes(h.type)) -->
+		<!-- }), -->
+		
+		
+		
+		function mostrar(){
+			result.innerHTML = cadenaResultado;
+		}
+		
+		
+		</script>
+	</body>
+</html>

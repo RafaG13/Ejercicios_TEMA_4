@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 4.1</title>
+  <style type="text/css">
+ 
+  </style>
+</head>
+<body>
+  
+  <ul id="id_Lista">
+    <li>Primer Elemento</li>
+	<li>Segundo Elemento</li>
+  </ul>
+  
+  <form id="idForm" name="Formulario">      
+    </br>
+    </br>
+    </br>
+    </br>
+    <input type="button" value="Insertar Aleatorio" onclick="InsertarAleatorio()">
+	<input type="button" value="Eliminar elemento" onclick="eliminarElemento()">
+  </form>
+
+</body>
+<script>
+
+function InsertarAleatorio(){
+	let contenedor = document.getElementById('id_Lista');
+	let nuevoLi = document.createElement('li');
+	let numeroAleatorio = Math.random();
+	
+	let contenido = document.createTextNode(`Nuevo elemento: ${numeroAleatorio}`);
+	nuevoLi.appendChild(contenido);
+	contenedor.appendChild(nuevoLi);
+}
+
+function eliminarElemento(){
+	let miLista = document.getElementById('id_Lista');
+	let elementoParaBorrar = miLista.lastElementChild;
+	if(elementoParaBorrar==null){
+		alert("No quedan elementos para borrar");
+		
+	}else{
+		miLista.removeChild(elementoParaBorrar);
+	}
+	
+}
+
+</script> 
+</html>

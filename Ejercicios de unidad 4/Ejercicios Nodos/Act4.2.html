@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 4.2</title>
+  <style type="text/css">
+ 
+  </style>
+</head>
+<body>
+
+  <form id="id_form">  
+	<label>Número de checkbox
+    <input type="text" name="numero" id="input_id" autofocus>
+	</label><br>
+	<!-- CUIDADO CON SUBMIT, recarga la página al enviar el formulario -->
+	<input type="button" value="Insertar Checkbox" onclick="insertarCheckbox()"> 
+  </form>
+  
+  <div id="id_lista">
+ 
+  </div>
+  
+  
+
+</body>
+<script>
+
+function insertarCheckbox(){
+	let numero = document.getElementById('input_id').value;
+	for(let i = 0;i<numero;i++){
+		let numeroAleatorio = Math.random();
+		let labelC = document.createElement('label');
+		let inputC = document.createElement('input');
+		inputC.setAttribute('type','checkbox');       
+		let texto = document.createTextNode(numeroAleatorio);
+		let bere = document.createElement('br');
+		let contenido = document.getElementById('id_lista');
+		labelC.appendChild(inputC);
+		labelC.appendChild(texto);
+		contenido.appendChild(labelC);
+		contenido.appendChild(bere);
+	}
+}
+</script> 
+</html>
